@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ed">
+  <meta name="description" content="Family Mudi Bhandar — আপনার প্রতিদিনের মুদিখানা, এক জায়গায়।">
+  <title>Family Mudi Bhandar — প্রতিদিনের বাজার, সহজে</title>
+  <style>
+    :root{--ink:#183b2c;--muted:#637269;--green:#286348;--lime:#d7ef9b;--cream:#f6f5ed;--card:#fffefa;--line:#e6e8dc;--orange:#f2a45b}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,"Noto Sans Bengali","Nirmala UI",system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .top{background:var(--ink);color:#f7f6ef;font-size:13px;padding:9px 0}.top .wrap{display:flex;justify-content:space-between;gap:12px}
+    header{padding:20px 0}.head{display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:19px}.logo{width:44px;height:44px;border-radius:15px;background:var(--lime);display:grid;place-items:center;font-size:24px}
+    nav{display:flex;align-items:center;gap:26px;color:#496354;font-size:14px}.cartbtn{border:0;border-radius:999px;background:var(--green);color:white;padding:12px 18px;font-weight:700;cursor:pointer}.cartcount{background:var(--lime);color:var(--ink);padding:2px 8px;border-radius:20px;margin-left:6px}
+    .hero{padding:38px 0 54px}.heroBox{background:#e9f0dd;border-radius:30px;min-height:390px;padding:54px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;overflow:hidden;position:relative}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #cbd9bc;background:#f5f7ef;border-radius:99px;padding:8px 13px;font-size:13px;color:var(--green);font-weight:700}
+    h1{font-size:clamp(38px,5.5vw,66px);line-height:1.1;letter-spacing:-2px;margin:18px 0}.hero p{color:var(--muted);font-size:17px;line-height:1.8;max-width:500px}
+    .heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.primary,.secondary{padding:14px 20px;border-radius:12px;font-weight:750;display:inline-flex;align-items:center;gap:9px}.primary{background:var(--green);color:white}.secondary{background:white;color:var(--green)}
+    .art{height:280px;display:grid;place-items:center;position:relative}.basket{font-size:150px;filter:drop-shadow(0 18px 16px #657b4a44);transform:rotate(-8deg)}.float{position:absolute;background:white;padding:12px 15px;border-radius:15px;box-shadow:0 10px 25px #183b2c12;font-size:14px;font-weight:700}.f1{top:25px;right:10px}.f2{bottom:25px;left:10px}
+    .section{padding:24px 0 48px}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.section h2{font-size:30px;margin:0 0 6px}.sectionHead p{margin:0;color:var(--muted)}.search{border:1px solid var(--line);background:white;border-radius:12px;padding:12px 14px;width:min(280px,45vw);outline-color:var(--green)}
+    .categories{display:flex;gap:9px;overflow:auto;padding:2px 0 18px}.chip{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--green);padding:9px 15px;border-radius:99px;cursor:pointer}.chip.active{background:var(--green);color:white;border-color:var(--green)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:17px;min-height:180px;display:flex;flex-direction:column}.emoji{height:64px;width:64px;background:#f1f3e8;border-radius:17px;display:grid;place-items:center;font-size:34px;margin-bottom:13px}.product h3{margin:0;font-size:16px}.product small{color:var(--muted);margin-top:5px}.productFooter{margin-top:auto;padding-top:15px;display:flex;justify-content:space-between;align-items:center}.price{color:var(--muted);font-size:12px}.add{width:34px;height:34px;border:0;border-radius:11px;background:var(--lime);font-size:21px;color:var(--ink);cursor:pointer}
+    .empty{padding:24px;color:var(--muted);text-align:center;grid-column:1/-1}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}.feature{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}.feature strong{display:block;margin:10px 0 5px}.feature p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}.ficon{font-size:27px}
+    .order{margin:8px 0 58px;background:var(--ink);color:white;border-radius:24px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px}.order p{color:#c4d2c8;margin:6px 0 0}.order button{border:0;border-radius:12px;background:var(--lime);color:var(--ink);font-weight:800;padding:13px 17px;cursor:pointer}
+    footer{border-top:1px solid var(--line);padding:22px 0 35px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:14px}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:white;padding:12px 17px;border-radius:12px;transition:.2s;box-shadow:0 10px 30px #0002;z-index:5}.toast.show{opacity:1;transform:translate(-50%,0)}
+    .modal{position:fixed;inset:0;background:#13281fb0;display:none;place-items:center;padding:20px;z-index:6}.modal.open{display:grid}.dialog{background:white;border-radius:22px;padding:24px;width:min(480px,100%);max-height:85vh;overflow:auto}.dialogHead{display:flex;justify-content:space-between;align-items:center}.dialog h2{margin:0}.close{border:0;background:#eff2e9;border-radius:10px;padding:8px 12px;cursor:pointer}.cartlines{padding:12px 0}.cartline{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)}.dialog .primary{border:0;cursor:pointer;width:100%;justify-content:center;margin-top:10px}
+    @media(max-width:800px){.heroBox{padding:35px;grid-template-columns:1fr}.art{height:190px}.basket{font-size:120px}.grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}.top .wrap span:last-child{display:none}.hero{padding-top:16px}.heroBox{padding:28px 22px;border-radius:22px}.hero p{font-size:15px}.art{height:145px}.basket{font-size:95px}.f1{right:0}.f2{left:0}.sectionHead{align-items:stretch;flex-direction:column}.search{width:100%}.features{grid-template-columns:1fr}.order{align-items:flex-start;flex-direction:column}.foot{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span>🌿 আপনার প্রতিদিনের বাজার, এক জায়গায়</span><span>Family Mudi Bhandar · স্বাগতম</span></div></div>
+  <header><div class="wrap head">
+    <a class="brand" href="#"><span class="logo">🛒</span><span>Family Mudi Bhandar</span></a>
+    <nav><a href="#products">পণ্য দেখুন</a><a href="#why">আমাদের কথা</a><a href="#order">অর্ডার তালিকা</a></nav>
+    <button class="cartbtn" id="openCart">🛍️ ঝুড়ি <span class="cartcount" id="count">0</span></button>
+  </div></header>
+  <main>
+    <section class="hero"><div class="wrap heroBox">
+      <div><span class="eyebrow">🌱 পরিবারের প্রতিদিনের সঙ্গী</span><h1>ঘরের বাজার<br>হোক সহজ</h1><p>চাল-ডাল থেকে নিত্যপ্রয়োজনীয় জিনিস—আপনার বাজারের তালিকা গুছিয়ে নিন Family Mudi Bhandar-এর সঙ্গে।</p>
+        <div class="heroActions"><a class="primary" href="#products">পণ্য দেখুন <span>→</span></a><a class="secondary" href="#order">🧺 তালিকা তৈরি করুন</a></div>
+      </div>
+      <div class="art"><span class="basket">🧺</span><span class="float f1">🥬 টাটকা পছন্দ</span><span class="float f2">🏠 ঘরের বাজার</span></div>
+    </div></section>
+    <section class="section" id="products"><div class="wrap">
+      <div class="sectionHead"><div><h2>বাজারের তালিকা</h2><p>আপনার প্রয়োজনীয় জিনিস বেছে নিয়ে তালিকা বানান</p></div><input class="search" id="search" type="search" placeholder="পণ্য খুঁজুন…" aria-label="পণ্য খুঁজুন"></div>
+      <div class="categories" id="categories"></div><div class="grid" id="grid"></div>
+    </div></section>
+    <section class="section" id="why"><div class="wrap"><div class="sectionHead"><div><h2>কেন Family Mudi Bhandar?</h2><p>আপনার ঘরের বাজারের তালিকা, সহজ ও গোছানোভাবে</p></div></div>
+      <div class="features"><article class="feature"><span class="ficon">🧾</span><strong>সহজ বাজারের তালিকা</strong><p>যা যা লাগবে বেছে নিন, সব একসঙ্গে দেখে নিন।</p></article><article class="feature"><span class="ficon">🔎</span><strong>সহজে পণ্য খুঁজুন</strong><p>নাম লিখে প্রয়োজনীয় জিনিস দ্রুত খুঁজে নিন।</p></article><article class="feature"><span class="ficon">💚</span><strong>পরিবারের জন্য</strong><p>প্রতিদিনের প্রয়োজনীয় বাজার এক জায়গায় গুছিয়ে রাখুন।</p></article></div>
+    </div></section>
+    <section id="order" class="wrap order"><div><strong>আপনার বাজারের তালিকা তৈরি?</strong><p>পছন্দের পণ্য ঝুড়িতে যোগ করে তালিকাটি কপি করুন।</p></div><button id="orderNow">তালিকা দেখুন →</button></section>
+  </main>
+  <footer><div class="wrap foot"><span>© <span id="year"></span> Family Mudi Bhandar</span><span>দোকানের ঠিকানা ও যোগাযোগের তথ্য শিগগির যোগ হবে</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="dialog"><div class="dialogHead"><h2 id="cartTitle">আপনার ঝুড়ি</h2><button class="close" id="closeCart" aria-label="বন্ধ করুন">বন্ধ ×</button></div><div id="cartlines" class="cartlines"></div><button class="primary" id="copyList">📋 বাজারের তালিকা কপি করুন</button></div></div>
+  <script>
+    const products=[
+      {name:"চাল",meta:"নিত্যপ্রয়োজনীয়",emoji:"🍚",cat:"চাল-ডাল"},
+      {name:"মসুর ডাল",meta:"নিত্যপ্রয়োজনীয়",emoji:"🫘",cat:"চাল-ডাল"},
+      {name:"আটা",meta:"রান্নাঘরের প্রয়োজন",emoji:"🌾",cat:"চাল-ডাল"},
+      {name:"ভোজ্য তেল",meta:"রান্নাঘরের প্রয়োজন",emoji:"🫗",cat:"রান্নাঘর"},
+      {name:"লবণ",meta:"নিত্যপ্রয়োজনীয়",emoji:"🧂",cat:"রান্নাঘর"},
+      {name:"চিনি",meta:"নিত্যপ্রয়োজনীয়",emoji:"🍚",cat:"রান্নাঘর"},
+      {name:"চা",meta:"প্রতিদিনের পছন্দ",emoji:"🍵",cat:"রান্নাঘর"},
+      {name:"বিস্কুট",meta:"হালকা নাস্তা",emoji:"🍪",cat:"নাস্তা"},
+      {name:"সাবান",meta:"ব্যক্তিগত পরিচর্যা",emoji:"🧼",cat:"পরিচর্যা"},
+      {name:"ডিটারজেন্ট",meta:"ঘর পরিষ্কার",emoji:"🫧",cat:"পরিচর্যা"},
+      {name:"টুথপেস্ট",meta:"ব্যক্তিগত পরিচর্যা",emoji:"🪥",cat:"পরিচর্যা"},
+      {name:"নুডলস",meta:"সহজ খাবার",emoji:"🍜",cat:"নাস্তা"}
+    ];
+    let category="সব পণ্য", cart={};
+    const categories=["সব পণ্য",...new Set(products.map(p=>p.cat))];
+    const grid=document.getElementById("grid"), chips=document.getElementById("categories"), search=document.getElementById("search");
+    function renderCategories(){chips.innerHTML=categories.map(c=>'<button class="chip '+(c===category?'active':'')+'" data-cat="'+c+'">'+c+'</button>').join("");chips.querySelectorAll("button").forEach(b=>b.onclick=()=>{category=b.dataset.cat;renderCategories();renderProducts()})}
+    function renderProducts(){let q=search.value.trim().toLowerCase();let items=products.filter(p=>(category==="সব পণ্য"||p.cat===category)&&p.name.toLowerCase().includes(q));grid.innerHTML=items.length?items.map((p)=>'<article class="product"><div class="emoji">'+p.emoji+'</div><h3>'+p.name+'</h3><small>'+p.meta+'</small><div class="productFooter"><span class="price">দাম জানতে দোকানে যোগাযোগ করুন</span><button class="add" aria-label="'+p.name+' ঝুড়িতে যোগ করুন" data-name="'+p.name+'">+</button></div></article>').join(""):'<div class="empty">এই নামে কোনো পণ্য পাওয়া যায়নি।</div>';grid.querySelectorAll(".add").forEach(b=>b.onclick=()=>{cart[b.dataset.name]=(cart[b.dataset.name]||0)+1;updateCart();showToast(b.dataset.name+" ঝুড়িতে যোগ হয়েছে")})}
+    function updateCart(){let n=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("count").textContent=n;let entries=Object.entries(cart);document.getElementById("cartlines").innerHTML=entries.length?entries.map(([name,qty])=>'<div class="cartline"><span>'+name+'</span><span>× '+qty+'</span></div>').join(""):'<p>এখনও কোনো পণ্য যোগ করেননি।</p>';document.getElementById("copyList").disabled=!entries.length}
+    function showToast(msg){let t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2100)}
+    document.getElementById("openCart").onclick=()=>document.getElementById("modal").classList.add("open");
+    document.getElementById("orderNow").onclick=()=>{document.getElementById("modal").classList.add("open");document.getElementById("modal").scrollIntoView({block:"nearest"})};
+    document.getElementById("closeCart").onclick=()=>document.getElementById("modal").classList.remove("open");
+    document.getElementById("modal").onclick=e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("open")};
+    document.getElementById("copyList").onclick=async()=>{let lines=Object.entries(cart).map(([n,q])=>n+" × "+q).join("\n");try{await navigator.clipboard.writeText("Family Mudi Bhandar — বাজারের তালিকা\n"+lines);showToast("তালিকা কপি হয়েছে")}catch{showToast("তালিকা: "+lines)}};
+    search.addEventListener("input",renderProducts);document.getElementById("year").textContent=new Date().getFullYear();renderCategories();renderProducts();updateCart();
+  </script>
+</body>
+</html>
